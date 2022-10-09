@@ -14,7 +14,7 @@ public class GUI_FA extends JFrame {
     private final JLabel lblWhoIsChooseTheNumber;
     private final JButton btnComputerChooseTheNumber;
     private final JButton btnUserChooseTheNumber;
-    private final JLabel lblChooseTheNumber;
+    private JLabel lblChooseTheNumber;
     private final JTextField txtUserNumber;
     private JButton btnLetsGo2;
     private JLabel lblErrorChooseTheNumber;
@@ -245,7 +245,8 @@ public class GUI_FA extends JFrame {
                     btnLetsGo.setVisible(false);
                     lblErrorRangeNumber.setVisible(false);
 
-                    lblGuessANumber.setText("یک عدد بین " + smallestNumber + " تا " + biggestNumber + " حدس بزنید:");
+                    lblChooseTheNumber.setText("عدد مورد نظر را بین " + smallestNumber + " و " + biggestNumber + " انتخاب کنید:");
+                    lblGuessANumber.setText("یک عدد بین " + smallestNumber + " و " + biggestNumber + " حدس بزنید:");
 
                     numberChooser();
                 } else {
@@ -280,7 +281,8 @@ public class GUI_FA extends JFrame {
                     btnLetsGo.setVisible(false);
                     lblErrorRangeNumber.setVisible(false);
 
-                    lblGuessANumber.setText("یک عدد بین " + smallestNumber + " تا " + biggestNumber + " حدس بزنید:");
+                    lblChooseTheNumber.setText("عدد مورد نظر را بین " + smallestNumber + " و " + biggestNumber + " انتخاب کنید:");
+                    lblGuessANumber.setText("یک عدد بین " + smallestNumber + " و " + biggestNumber + " حدس بزنید:");
 
                     numberChooser();
                 } else {
@@ -329,7 +331,7 @@ public class GUI_FA extends JFrame {
             chooseNumber();
         });
 
-        lblChooseTheNumber = new JLabel("عدد مورد نظر را وارد کنید؟");
+        lblChooseTheNumber = new JLabel();
         lblChooseTheNumber.setFont(new Font("", Font.BOLD, 50));
         lblChooseTheNumber.setHorizontalAlignment(SwingConstants.CENTER);
         lblChooseTheNumber.setBounds(0, 250,1920, 64);
